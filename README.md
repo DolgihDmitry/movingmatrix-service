@@ -16,7 +16,6 @@ This repository provides a pre-configured `docker-compose.yml` setup to quickly 
 - **Ports**:
     - `3306`: MySQL port
 - **Environment Variables**:
-    - `MYSQL_ROOT_PASSWORD`: `root`
     - `MYSQL_DATABASE`: `database`
     - `MYSQL_USER`: `sail`
     - `MYSQL_PASSWORD`: `sail`
