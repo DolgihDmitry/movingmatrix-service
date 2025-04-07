@@ -49,10 +49,13 @@ This repository provides a pre-configured `docker-compose.yml` setup to quickly 
    2.2. **Run create necessary folders**: 
    ```bash
 	mkdir -p "$PWD/storage" "$PWD/bootstrap/cache"
+   
    ```bash
 	mkdir -p "$PWD/storage/framework/cache/data" "$PWD/storage/framework/sessions" "$PWD/storage/framework/views"
+   
    ```bash
 	chmod -R 775 "$PWD/storage" "$PWD/bootstrap/cache" "$PWD/storage/framework/cache/data" "$PWD/storage/framework/sessions" "$PWD/storage/framework/views"
+   
 
    2.3. **Run Composer**:
       ```bash
