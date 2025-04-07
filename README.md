@@ -35,7 +35,8 @@ This repository provides a pre-configured `docker-compose.yml` setup to quickly 
    git clone https://github.com/DolgihDmitry/movingmatrix-service.git
    cd movingmatrix-service
    
-2. **Start Services**: Run the following command to start all services:
+2. **Start Services**:
+   Run the following command to start all services:
    2.1. Create .env file from .env-development (or copy from another similar project).
 
       You can adjust .env file in the root of the project (if you have another settings).
@@ -46,9 +47,11 @@ This repository provides a pre-configured `docker-compose.yml` setup to quickly 
       COMPOSE_PROJECT_NAME and APP_NAME in .env file for the each new service.
 
    2.2. **Run create necessary folders**: 
-      ```bash
+   ```bash
 	mkdir -p "$PWD/storage" "$PWD/bootstrap/cache"
+   ```bash
 	mkdir -p "$PWD/storage/framework/cache/data" "$PWD/storage/framework/sessions" "$PWD/storage/framework/views"
+   ```bash
 	chmod -R 775 "$PWD/storage" "$PWD/bootstrap/cache" "$PWD/storage/framework/cache/data" "$PWD/storage/framework/sessions" "$PWD/storage/framework/views"
 
    2.3. **Run Composer**:
