@@ -43,25 +43,26 @@ This repository provides a pre-configured `docker-compose.yml` setup to quickly 
 	3.1. **Create .env file from .env-development (or copy from another similar project)**.
 
    	You can adjust .env file in the root of the project (if you have another settings).
-  	 IMPORTANT!
+   
+  	## IMPORTANT!
    	Need to set:
    	COMPOSE_PROJECT_NAME and APP_NAME in .env file for each new service.
 
-  	3.2. **Run create necessary folders**: 
+  	3.2. **Create necessary folders**: 
 
-	`mkdir -p "$PWD/storage" "$PWD/bootstrap/cache"
-	mkdir -p "$PWD/storage/framework/cache/data" "$PWD/storage/framework/sessions" "$PWD/storage/framework/views"
-	chmod -R 775 "$PWD/storage" "$PWD/bootstrap/cache" "$PWD/storage/framework/cache/data" "$PWD/storage/framework/sessions" "$PWD/storage/framework/views"`
+	`mkdir -p "$PWD/storage" "$PWD/bootstrap/cache"`
+
+	`mkdir -p "$PWD/storage/framework/cache/data" "$PWD/storage/framework/sessions" "$PWD/storage/framework/views"`
+
+	`chmod -R 775 "$PWD/storage" "$PWD/bootstrap/cache" "$PWD/storage/framework/cache/data" "$PWD/storage/framework/sessions" "$PWD/storage/framework/views"`
 
  	 3.3. **Run Composer**:
 		`composer install`
 
   	3.4. **Create Docker containers**:
-		Run these in the project folder:  
 		`./vendor/bin/sail build --no-cache`
 
  	 3.5. **Start Sail**:
-		Run these in the project folder:
 		`./vendor/bin/sail up -d`
 
   	3.6. **Check services**:
@@ -73,6 +74,6 @@ This repository provides a pre-configured `docker-compose.yml` setup to quickly 
  	 3.8. **Run DB Migration**:
 		`./vendor/bin/sail artisan migrate`
 
-Notes
+### Notes
 
 Update the passwords and sensitive information in the environment variables for production use.
