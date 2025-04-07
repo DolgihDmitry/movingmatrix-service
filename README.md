@@ -1,5 +1,5 @@
 # movingmatrix-service
-Template for services based on Laravel 12 with Sail and Telescope extentions.
+The template for services based on Laravel 12 with Sail and Telescope extentions.
 
 # Docker Compose Setup for Multi-Service Environment
 
