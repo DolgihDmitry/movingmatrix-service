@@ -43,36 +43,43 @@ This repository provides a pre-configured `docker-compose.yml` setup to quickly 
       Need to set:
       COMPOSE_PROJECT_NAME and APP_NAME in .env file for the each new service.
 
-  2.2. Run create necessary folders: 
-  ```bash
+   2.2. Run create necessary folders: 
+  
+   ```bash
 	mkdir -p "$PWD/storage" "$PWD/bootstrap/cache"
 	mkdir -p "$PWD/storage/framework/cache/data" "$PWD/storage/framework/sessions" "$PWD/storage/framework/views"
 	chmod -R 775 "$PWD/storage" "$PWD/bootstrap/cache" "$PWD/storage/framework/cache/data" "$PWD/storage/framework/sessions" "$PWD/storage/framework/views"
 
-  2.3. Run Composer: 
-  ```bash
+   2.3. Run Composer:
+
+   ```bash
 	composer install
 
-  2.4. Create Docker containers:
-	Run these in the project folder: 
-  ```bash
+   2.4. Create Docker containers:
+	Run these in the project folder:
+
+   ```bash
 	./vendor/bin/sail build --no-cache 
 
-  2.5. Start Sail:
-	Run these in the project folder: 
-  ```bash
+   2.5. Start Sail:
+	Run these in the project folder:
+
+   ```bash
 	./vendor/bin/sail up -d 
 
-  2.6. Check services: 
-  ```bash
+   2.6. Check services:
+
+   ```bash
 	./vendor/bin/sail ps
 
-  2.7. Generate Laravel key:
-  ```bash
+   2.7. Generate Laravel key:
+
+   ```bash
 	./vendor/bin/sailartisan key:generate 
 
-  2.8. Run DB Migration:
-  ```bash
+   2.8. Run DB Migration:
+
+   ```bash
 	./vendor/bin/sail artisan migrate
 
 
