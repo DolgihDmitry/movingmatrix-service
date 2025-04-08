@@ -69,7 +69,7 @@ This repository provides a pre-configured `docker-compose.yml` setup to quickly 
 		`./vendor/bin/sail ps`
 
 	  3.7. **Generate Laravel key**:
- 		`./vendor/bin/sailartisan key:generate`
+ 		`./vendor/bin/sail artisan key:generate`
 
  	 3.8. **Run DB Migration**:
 		`./vendor/bin/sail artisan migrate`
